@@ -15,7 +15,7 @@ rm(data_full)
 datetime <- paste(as.Date(data$Date), data$Time)
 data$Datetime <- as.POSIXct(datetime)
 
-## Plot 1
+## Graph
 hist(data$Global_active_power, main="Global Active Power", 
      xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
 
@@ -38,7 +38,7 @@ rm(data_full)
 datetime <- paste(as.Date(data$Date), data$Time)
 data$Datetime <- as.POSIXct(datetime)
 
-## Plot 2
+## Graph 2
 plot(data$Global_active_power~data$Datetime, type="l",
      ylab="Global Active Power (kilowatts)", xlab="")
 dev.copy(png, file="plot2.png", height=480, width=480)
@@ -59,7 +59,7 @@ rm(data_full)
 datetime <- paste(as.Date(data$Date), data$Time)
 data$Datetime <- as.POSIXct(datetime)
 
-## Plot 3
+## Graph 3
 with(data, {
 plot(Sub_metering_1~Datetime, type="l",
 ylab="Global Active Power (kilowatts)", xlab="")
@@ -88,7 +88,7 @@ rm(data_full)
 datetime <- paste(as.Date(data$Date), data$Time)
 data$Datetime <- as.POSIXct(datetime)
 
-## Plot 4
+## Graph 4
 par(mfrow=c(2,2), mar=c(4,4,2,1), oma=c(0,0,2,0))
 with(data, {
 plot(Global_active_power~Datetime, type="l", 
